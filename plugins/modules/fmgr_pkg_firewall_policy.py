@@ -222,16 +222,16 @@ options:
                     - 'disable'
                     - 'enable'
             dstaddr:
-                type: str
+                type: list
                 description: 'Destination address and address group names.'
             dstaddr-negate:
-                type: str
+                type: list
                 description: 'When enabled dstaddr specifies what the destination address must NOT be.'
                 choices:
                     - 'disable'
                     - 'enable'
             dstintf:
-                type: str
+                type: list
                 description: 'Outgoing (egress) interface.'
             firewall-session-dirty:
                 type: str
@@ -462,7 +462,7 @@ options:
                     - 'disable'
                     - 'enable'
             service:
-                type: str
+                type: list
                 description: 'Service and service group names.'
             service-negate:
                 type: str
@@ -477,16 +477,16 @@ options:
                 type: str
                 description: 'Name of an existing Spam filter profile.'
             srcaddr:
-                type: str
+                type: list
                 description: 'Source address and address group names.'
             srcaddr-negate:
-                type: str
+                type: list
                 description: 'When enabled srcaddr specifies what the source address must NOT be.'
                 choices:
                     - 'disable'
                     - 'enable'
             srcintf:
-                type: str
+                type: list
                 description: 'Incoming (ingress) interface.'
             ssl-mirror:
                 type: str
@@ -1059,7 +1059,7 @@ def main():
                 },
                 'dstaddr': {
                     'required': False,
-                    'type': 'str'
+                    'type': 'list'
                 },
                 'dstaddr-negate': {
                     'required': False,
@@ -1067,11 +1067,11 @@ def main():
                         'disable',
                         'enable'
                     ],
-                    'type': 'str'
+                    'type': 'list'
                 },
                 'dstintf': {
                     'required': False,
-                    'type': 'str'
+                    'type': 'list'
                 },
                 'firewall-session-dirty': {
                     'required': False,
@@ -1378,7 +1378,7 @@ def main():
                 },
                 'service': {
                     'required': False,
-                    'type': 'str'
+                    'type': 'list'
                 },
                 'service-negate': {
                     'required': False,
@@ -1386,7 +1386,7 @@ def main():
                         'disable',
                         'enable'
                     ],
-                    'type': 'str'
+                    'type': 'list'
                 },
                 'session-ttl': {
                     'required': False,
@@ -1398,7 +1398,7 @@ def main():
                 },
                 'srcaddr': {
                     'required': False,
-                    'type': 'str'
+                    'type': 'list'
                 },
                 'srcaddr-negate': {
                     'required': False,
@@ -1406,11 +1406,11 @@ def main():
                         'disable',
                         'enable'
                     ],
-                    'type': 'str'
+                    'type': 'list'
                 },
                 'srcintf': {
                     'required': False,
-                    'type': 'str'
+                    'type': 'list'
                 },
                 'ssl-mirror': {
                     'required': False,
